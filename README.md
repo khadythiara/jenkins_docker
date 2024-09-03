@@ -1,2 +1,3 @@
-# jenkins_docker
-# jenkins_docker
+# Simple Java Project
+This is a demo project that you can use with [Buddy Continuous Deployment](https://buddy.works).
+# jenkins-baamtu
