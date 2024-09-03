@@ -1,7 +1,7 @@
 pipeline {
   environment {
     imagename = "khadydiagne/push_jenkins" // Nom de l'image Docker
-    registryCredential = 'Dockerhub' // Credential ID pour Docker Hub
+    registryCredential = 'simple-java-project' // Credential ID pour Docker Hub
   }
   agent any
   stages {
