@@ -20,7 +20,7 @@ pipeline {
       steps {
         script {
           // Récupérer le mot de passe Docker depuis les credentials Jenkins
-          withCredentials([usernamePassword(credentialsId: registryCredential, '')]) {
+          withCredentials([usernamePassword(credentialsId: registryCredential, 'Dockerhub')]) {
 //            sh 'echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin' // Login à Docker Hub
             sh 'docker push $imagename:${BUILD_NUMBER}' // Pousser l'image avec le numéro de build
             sh 'docker push $imagename:latest' // Pousser l'image avec le tag 'latest'
