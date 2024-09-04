@@ -1,5 +1,6 @@
 pipeline {
   environment {
+     DOCKER_CERT_PATH = '/certs/client'
     imagename = "khadydiagne/push_jenkins" // Nom de l'image Docker
     registryCredential = 'Dockerhub' // Credential ID pour Docker Hub
   }
