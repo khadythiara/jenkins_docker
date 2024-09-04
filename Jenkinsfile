@@ -1,5 +1,6 @@
 pipeline {
   environment {
+    DOCKER_HOST = 'unix:///var/run/docker.sock'
      DOCKER_CERT_PATH = '/certs/client'
     imagename = "khadydiagne/push_jenkins" // Nom de l'image Docker
     registryCredential = 'Dockerhub' // Credential ID pour Docker Hub
@@ -17,6 +18,17 @@ pipeline {
         sh 'docker tag $imagename:${BUILD_NUMBER} $imagename:latest' // Taguer l'image avec 'latest'
       }
     }
+
+stage('Debug Docker Connection') {
+    steps {
+        script {
+            sh 'docker info'
+            sh 'ping docker -c 4'
+        }
+    }
+}
+
+    
     stage('Deploy Image') {
       steps {
         script {
