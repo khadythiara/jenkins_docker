@@ -1,7 +1,7 @@
 pipeline {
   environment {
-    DOCKER_HOST = 'unix://var/run/docker.sock'
-     DOCKER_CERT_PATH = '/certs/client'
+   // DOCKER_HOST = 'unix://var/run/docker.sock'
+     //DOCKER_CERT_PATH = '/certs/client'
     imagename = "khadydiagne/push_jenkins_docker" // Nom de l'image Docker
     registryCredential = 'Dockerhub' // Credential ID pour Docker Hub
   }
