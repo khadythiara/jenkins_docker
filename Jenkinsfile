@@ -37,7 +37,7 @@ pipeline {
           steps {
               script {
                     // Exécution du conteneur Docker
-                    dockerImage.run("-d -p 8085:80")
+                    dockerImage.run("-d -p 8087:80")
                 }
             }
         }
