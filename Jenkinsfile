@@ -1,6 +1,7 @@
 pipeline {
   environment {
-    imagename = "khadydiagne/simple-java-app"
+     DOCKER_HOST = 'unix:///var/run/docker.sock'
+    imagename = "khadydiagne/jenkins_docker"
     registryCredential = 'Dockerhub' 
     dockerImage = ''
   }
